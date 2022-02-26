@@ -31,4 +31,7 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "brand_id")
     private Brand brand;
+
+    @OneToMany(orphanRemoval=true, mappedBy = "product")
+    public List<BasketItem> basketItems;
 }
