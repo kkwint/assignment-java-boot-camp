@@ -19,12 +19,11 @@ public class User {
     private String userName;
     private String firstName;
     private String lastName;
-    private String address;
-    private String postCode;
-    private String district;
-    private String province;
     private String phone;
+    private String email;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private UserAddress userAddress;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Basket basket;
