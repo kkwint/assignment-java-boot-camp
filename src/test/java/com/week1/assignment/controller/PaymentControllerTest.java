@@ -49,7 +49,7 @@ class PaymentControllerTest {
         when(userRepository.findByUserName("test")).thenReturn(Optional.of(user));
 
         //Act
-        PaymentDetailResponseDTO result = testRestTemplate.getForObject("/api/payment/default/?userName=test", PaymentDetailResponseDTO.class);
+        PaymentDetailResponseDTO result = testRestTemplate.getForObject("/api/payment/user-payment/?userName=test", PaymentDetailResponseDTO.class);
 
         //Assert
         PaymentDetailResponseDTO expectedObject = new PaymentDetailResponseDTO(1, "DEBIT", "12200110044","UBI SOFT","12/12/2025","555");

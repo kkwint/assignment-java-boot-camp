@@ -15,7 +15,7 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-    @GetMapping("/default")
+    @GetMapping("/user-payment")
     public PaymentDetailResponseDTO getDefaultPaymentDetail(@RequestParam("userName") String userName) {
         return paymentService.getDefaultPaymentDetail(userName);
     }
