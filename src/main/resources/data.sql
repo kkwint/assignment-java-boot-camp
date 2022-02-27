@@ -32,6 +32,9 @@ INSERT INTO product_available(size,quantity,created_at,product_id) VALUES (35,1,
 INSERT INTO product_available(size,quantity,created_at,product_id) VALUES (35,8,CURRENT_TIMESTAMP(),10);
 
 -- User
-INSERT INTO user(user_name,first_name,last_name,address,post_code,district,province,phone) VALUES ('user1', 'FirstName', 'LastName', '111/222', '10900', 'JKN', 'BANGKOK', '+669979977');
+INSERT INTO user(user_name,first_name,last_name,phone,email) VALUES ('user1', 'FirstName', 'LastName', '+669979977','test@mail.com');
+
+-- User Address
+INSERT INTO user_address(address,post_code,district,province,user_id) VALUES ('111/222', '10900', 'JKN', 'BANGKOK', 1);
 
 
