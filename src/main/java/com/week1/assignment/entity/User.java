@@ -27,4 +27,7 @@ public class User {
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Basket basket;
+
+    @OneToMany(orphanRemoval=true, mappedBy = "user", fetch = FetchType.LAZY)
+    private List<UserPayment> userPaymentList;
 }
