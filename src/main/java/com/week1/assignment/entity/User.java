@@ -30,4 +30,7 @@ public class User {
 
     @OneToMany(orphanRemoval=true, mappedBy = "user", fetch = FetchType.LAZY)
     private List<UserPayment> userPaymentList;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private OrderDetail orderDetail;
 }
