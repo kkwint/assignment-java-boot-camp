@@ -21,8 +21,8 @@ public class Basket {
     @JoinColumn(name = "basket_id")
     private List<BasketItem> basketItem = new ArrayList<>();
 
-    @ManyToOne(cascade= CascadeType.ALL)
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @OneToOne
+    @JoinColumn(name = "user_id", unique = true)
     private User user;
 
     private Double total;
