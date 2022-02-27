@@ -40,4 +40,6 @@ INSERT INTO user_address(address,post_code,district,province,user_id) VALUES ('1
 -- User Payment
 INSERT INTO user_payment(payment_type,card_no,card_name,expiry_date,cvv,is_default_payment,user_id) VALUES ('DEBIT','12200110044','UBI SOFT','12/12/2025','555',true,1);
 
+-- Payee
+INSERT INTO payee(id,payee,detail) VALUES (1, 'www.lazada.co.th Tel: 020180000', 'Lazada');
 
