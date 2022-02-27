@@ -7,7 +7,7 @@ import java.util.*;
 
 @Entity
 @Table(name = "product")
-@Data
+@Data @AllArgsConstructor @NoArgsConstructor
 public class Product {
 
     @Id

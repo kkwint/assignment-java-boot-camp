@@ -3,7 +3,6 @@ package com.week1.assignment.service;
 import com.week1.assignment.entity.User;
 import com.week1.assignment.entity.UserPayment;
 import com.week1.assignment.model.PaymentDetailResponseDTO;
-import com.week1.assignment.model.UserAddressResponseDTO;
 import com.week1.assignment.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,7 +31,7 @@ public class PaymentService {
                 .findFirst().get();
 
         paymentDetailResponse.setId(defaultUserPayment.getId());
-        paymentDetailResponse.setPayment_type(defaultUserPayment.getPayment_type());
+        paymentDetailResponse.setPaymentType(defaultUserPayment.getPaymentType());
         paymentDetailResponse.setCardNo(defaultUserPayment.getCardNo());
         paymentDetailResponse.setCardName(defaultUserPayment.getCardName());
         paymentDetailResponse.setExpiryDate(defaultUserPayment.getExpiryDate());

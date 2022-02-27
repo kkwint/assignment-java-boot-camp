@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "product_available")
-@Data
+@Data @AllArgsConstructor @NoArgsConstructor
 public class ProductAvailable {
 
     @Id

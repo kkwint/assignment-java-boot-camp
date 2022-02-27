@@ -21,7 +21,7 @@ public class Basket {
     @JoinColumn(name = "basket_id")
     private List<BasketItem> basketItem = new ArrayList<>();
 
-    @OneToOne
+    @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "user_id", unique = true)
     private User user;
 
