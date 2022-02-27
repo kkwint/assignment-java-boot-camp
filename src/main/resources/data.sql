@@ -37,4 +37,7 @@ INSERT INTO user(user_name,first_name,last_name,phone,email) VALUES ('user1', 'F
 -- User Address
 INSERT INTO user_address(address,post_code,district,province,user_id) VALUES ('111/222', '10900', 'JKN', 'BANGKOK', 1);
 
+-- User Payment
+INSERT INTO user_payment(payment_type,card_no,card_name,expiry_date,cvv,is_default_payment,user_id) VALUES ('DEBIT','12200110044','UBI SOFT','12/12/2025','555',true,1);
+
 
